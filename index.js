@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   const seed = Math.random();
   
   if (seed > 0.75) {
-    throw new Exception(`A thrown exception from the app, seed was ${seed}`);
+    throw new Error(`A thrown exception from the app, seed was ${seed}`);
   }
   
   if (seed > 0.5) {
