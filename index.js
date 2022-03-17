@@ -3,13 +3,13 @@ const app = express();
 const port = 8080;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
-  
   const seed = Math.random();
   
   if (seed > 0.75) {
     throw new Error(`A thrown exception from the app, seed was ${seed}`);
   }
+  
+  res.send('Hello World!');
 });
 
 const seed = Math.random();
